@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/{category}','Controller@serveCategory');
+Route::get('/realizarCompra','Controller@comprar');
+
+Route::get('/carrito','Controller@carrito');
 
 Route::get('/agregar/{id}','Controller@agregarAlCarrito');
+
+Route::get('/{category}','Controller@serveCategory');

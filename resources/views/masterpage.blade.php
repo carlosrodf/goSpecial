@@ -84,10 +84,10 @@
 					  </ul>
 				   </li>
 				   <li><a href='#'><span>FAQ</span></a></li>
-           @if(Session::get('actuales')!==null)
-            <li class='last'><a href='#'><span>Carrito ({{Session::get('actuales')}})</span></a></li>
+          @if(Session::get('actuales')!==null)
+            <li class='last'><a href='/carrito'><span>Carrito ({{Session::get('actuales')}})</span></a></li>
           @else
-            <li class='last'><a href='#'><span>Carrito (0)</span></a></li>
+            <li class='last'><a href='/carrito'><span>Carrito (0)</span></a></li>
           @endif
 				</ul>
 			</div>
@@ -100,6 +100,7 @@
 
 <section id="container">
 	<div class="wrap-container">
+		@yield('area-carrito')
 		<section class="content-box box-3 box-style-1"><!--Start Box-->
 			<div class="zerogrid">
 				<div class="row">
